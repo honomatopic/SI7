@@ -5,7 +5,6 @@
  * and open the template in the editor.
  */
 
-define('DSNBDD' , 'mysql:host=localhost;dbname=calcul;charset=utf8');
+define('DSNBDD', 'mysql:host=localhost;dbname=calcul;charset=utf8');
 define('UTILISATEURBDD', 'root');
 define('MOTPASSEBDD', '');
-
