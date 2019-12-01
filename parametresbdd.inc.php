@@ -4,9 +4,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-define('HOTEBDD', 'localhost');
-define('NOMBDD' , 'calcul');
-define('ENCODEBDD' , 'SET NAMES utf8');
+
+define('DSNBDD' , 'mysql:host=localhost;dbname=calcul;charset=utf8');
 define('UTILISATEURBDD', 'root');
 define('MOTPASSEBDD', '');
 

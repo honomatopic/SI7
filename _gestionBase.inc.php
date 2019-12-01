@@ -7,7 +7,7 @@ function connexionBDD()
 {
     try {
         $pdo = new PDO(
-            "mysql:host=" . HOTEBDD . ";dbname=" . NOMBDD . ";encodage=" . ENCODEBDD,
+            DSNBDD,
             UTILISATEURBDD,
             MOTPASSEBDD,
             array(PDO::MYSQL_ATTR_INIT_COMMAND => ENCODEBDD)
