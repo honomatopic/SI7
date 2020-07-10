@@ -1,5 +1,5 @@
 <?php
-include_once("_entete.inc.php");
+require_once("_entete.inc.php");
 ?>
 
 <body>

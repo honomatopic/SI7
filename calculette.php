@@ -1,5 +1,6 @@
 <?php
-include_once('traitement.inc.php')?>
+require_once('_entetemenu.inc.php')
+;?>
 
 
 <div class="jumbotron container">
@@ -45,7 +46,7 @@ include_once('traitement.inc.php')?>
 		<a href="http://www.mangerbouger.fr/pour-qui-242/enfants/"><img
 			src="images/mangerbouger.jpg" /> </a>
     <?php
-    include_once ('traitement.inc.php');
+    include_once ('calcul.traitement.php');
     ?>
 </body>
 <?php include_once('_piedpage.inc.php');?>

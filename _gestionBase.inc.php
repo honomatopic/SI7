@@ -1,6 +1,5 @@
 <?php
 // Fichier recensant l'ensemble des fonctions permettant la connexion à la base de données calcul
-include_once('parametresbdd.inc.php');
 
 // Fonction permettant la connexion à la base de données calcul
 function connexionBDD()
@@ -9,8 +8,7 @@ function connexionBDD()
         $pdo = new PDO(
             DSNBDD,
             UTILISATEURBDD,
-            MOTPASSEBDD,
-            array(PDO::MYSQL_ATTR_INIT_COMMAND => ENCODEBDD)
+            MOTPASSEBDD
         );
         // Activation des erreurs PDO
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

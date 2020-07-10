@@ -1,5 +1,5 @@
 <?php
-include_once("_entete.inc.php");
+require_once("_entete.inc.php");
 
 ?>
 
@@ -15,12 +15,12 @@ include_once("_entete.inc.php");
             <input type="password" class="form-control" name="motpasse" placeholder="Entrez votre mot de passe">
             <br>
             <button type="submit" class="btn btn-primary" name="envoyer">Envoyer</button>
-            <a href="inscription.php"><button type="submit" name="envoyer" class="btn btn-info btn-lg">S'inscrire</button></a>
+            <br>
         </form>
-
-
+        
+        <a href="inscription.php"><button type="submit" name="envoyer" class="btn btn-info btn-lg">S'inscrire</button></a>
     </div> <!-- /container -->
-
+    
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 </body>
