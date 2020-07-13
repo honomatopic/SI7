@@ -20,9 +20,7 @@ function soustraction($premierchiffre, $deuxiemechiffre)
 // Algorithme qui calcul le résultat de l'addition s'il est supérieur ou inférieur à 10
 if (isset($_POST["egal"]) && $_POST["choix"] == "addition") {
     $resultatcalcul = $_POST["egal"];
-    $premierchiffre = $_POST["nombre1"];
-    $deuxiemechiffre = $_POST["nombre2"];
-    $egal = addition($premierchiffre, $deuxiemechiffre);
+    $egal = addition($_POST["nombre1"], $_POST["nombre2"]);
     if ($egal <= 9) {
         echo "<div class=\"alert alert-success\" role=\"alert\">
             Bravo ton addition est égale à $egal. Et il est en dessous à 10 !
@@ -35,9 +33,7 @@ if (isset($_POST["egal"]) && $_POST["choix"] == "addition") {
     // Et si c'est une soustraction, on détermine si le résultat est supérieur ou inférieur à 0
 } elseif (isset($_POST["egal"]) && $_POST["choix"] == "soustraction") {
     $resultatcalcul = $_POST["egal"];
-    $premierchiffre = $_POST["nombre1"];
-    $deuxiemechiffre = $_POST["nombre2"];
-    $egal = soustraction($premierchiffre, $deuxiemechiffre);
+    $egal = soustraction($_POST["nombre1"], $_POST["nombre2"]);
     if ($egal >= 0) {
         echo "<div class=\"alert alert-success\" role=\"alert\">
             Bravo ta soustraction est $egal. Et il est au dessus ou égal à 0 !
