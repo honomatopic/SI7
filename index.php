@@ -1,5 +1,5 @@
 <?php
-require_once("_entete.inc.php");
+require_once ("_entete.inc.php");
 
 ?>
 
@@ -24,6 +24,6 @@ require_once("_entete.inc.php");
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 </body>
-<?php include_once('_piedpage.inc.php'); ?>
+<?php require_once ('_piedpage.inc.php'); ?>
 
 </html>

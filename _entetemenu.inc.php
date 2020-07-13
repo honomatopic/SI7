@@ -1,4 +1,4 @@
-<?php require_once("_entete.inc.php");?>
+<?php require_once ("_entete.inc.php");?>
 <nav class="navbar-fixed-top navbar">
 
         <div class="container">

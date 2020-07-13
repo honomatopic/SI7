@@ -1,5 +1,5 @@
 <?php
-require_once('_entetemenu.inc.php');
+require_once ('_entetemenu.inc.php');
 ?>
 <div class="jumbotron">
 	<title>C'est Calculnette</title>

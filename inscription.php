@@ -1,5 +1,5 @@
 <?php
-require_once("_entete.inc.php");
+require_once ("_entete.inc.php");
 ?>
 
 <body>
@@ -34,6 +34,6 @@ require_once("_entete.inc.php");
 
 
 </body>
-<?php include_once('_piedpage.inc.php'); ?>
+<?php require_once ('_piedpage.inc.php'); ?>
 
 </html>
