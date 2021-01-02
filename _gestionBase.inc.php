@@ -19,6 +19,20 @@ function gestionnaireDeConnexion()
     return $cnx;
 }
 
+// La fonction seConnecter($email) permet à l'établissement de se connecter
+function seConnecter($email)
+{
+    $cnx = gestionnaireDeConnexion();
+    if ($cnx != NULL) {
+        $req = "SELECT * FROM etablissement WHERE email='$email'";
+        $requete_exec = mysqli_query($cnx, $req);
+        $lEtablissement = mysqli_fetch_assoc($requete_exec);
+    } else {
+        echo "Une erreur est survenue";
+    }
+    return $lEtablissement;
+}
+
 // Fonction permettant la création d'un établissement
 function creerEtablissement($codeuai, $nom, $adresse, $cp, $ville, $tel, $email, $motpasse)
 {
