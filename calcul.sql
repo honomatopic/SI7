@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `etablissement` (
   `ville` varchar(64) NOT NULL,
   `telephone` int(10) NOT NULL,
   `email` varchar(64) NOT NULL,
-  `password` varchar(32) NOT NULL,
+  `motpasse` varchar(32) NOT NULL,
   PRIMARY KEY (`code_uai`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
