@@ -80,11 +80,11 @@ function supprimerUnEtablissment($codeuai)
     $cnx = gestionnaireDeConnexion();
 	if ($cnx != NULL) {
 		$req = "DELETE FROM etablissement WHERE code_uai='$codeuai'";
-		$lEtablissement = mysqli_query($cnx, $req);
+		$supprimer_etablissement = mysqli_query($cnx, $req);
 	} else {
 		echo "Une erreur est survenue" ;
 	}
-    return $lEtablissement;
+    return $supprimer_etablissement;
 }
 
 // Fonction permettant de modifier les informations d'un établissment
@@ -94,11 +94,11 @@ function modifierUnEtablissement($codeuai, $nom, $adresse, $cp, $ville, $tel, $e
 	if ($cnx != NULL) {
 		$req = "UPDATE etablissement SET nom='$nom', adresse='$adresse', codepostal='$cp', ville='$ville', telephone='$tel', email='$email', motpasse='$motpasse'
      WHERE code_uai='$codeuai'";
-		$lEtablissement = mysqli_query($cnx, $req);
+		$modifier_etablissement = mysqli_query($cnx, $req);
 	} else {
 		echo "Une erreur est survenue" ;
 	}
-    return $lEtablissement;
+    return $modifier_etablissement;
 }
 
 
