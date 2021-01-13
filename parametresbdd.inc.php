@@ -1,5 +1,6 @@
 <?php
-/* 
+
+/*
  * Identifiants de connexion à la base de données calcul
  */
 

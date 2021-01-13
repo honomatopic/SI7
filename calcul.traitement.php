@@ -2,20 +2,15 @@
 
 // affichage des erreurs php
 // error_reporting(E_ALL);
-
-
 //Fonction qui additionne
-function addition($premierchiffre, $deuxiemechiffre)
-{
+function addition($premierchiffre, $deuxiemechiffre) {
     return $resultatCalcul = $premierchiffre + $deuxiemechiffre;
 }
 
 //Fonction qui soustrait
-function soustraction($premierchiffre, $deuxiemechiffre)
-{
+function soustraction($premierchiffre, $deuxiemechiffre) {
     return $resultatCalcul = $premierchiffre - $deuxiemechiffre;
 }
-
 
 // Algorithme qui calcul le résultat de l'addition s'il est supérieur ou inférieur à 10
 if (isset($_POST["egal"]) && $_POST["choix"] == "addition") {

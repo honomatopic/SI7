@@ -1,4 +1,5 @@
 <?php
+
 // Algorithme permettant la connexion de l'établissement
 if (isset($_POST["envoyer"], $_POST["email"], $_POST["motpasse"])) {
     $lEtablissement = lireUnEtablissement($_POST["email"]);

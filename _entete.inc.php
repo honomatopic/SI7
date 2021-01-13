@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 require_once ('parametresbdd.inc.php');
 require_once ('_gestionBase.inc.php');
@@ -32,4 +32,4 @@ require_once ('deconnexion.traitement.php');
         <![endif]-->
     </head>
     <body>    
-</body>
+    </body>
