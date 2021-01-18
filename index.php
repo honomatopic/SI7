@@ -17,7 +17,7 @@ require_once ("_entete.inc.php");
             <br>
         </form>
 
-        <a href="inscription.php"><button type="submit" name="envoyer" class="btn btn-info btn-lg">S'inscrire</button></a>
+        <a href="inscriptionEtablissement.php"><button type="submit" name="envoyer" class="btn btn-info btn-lg">S'inscrire</button></a>
     </div> <!-- /container -->
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->

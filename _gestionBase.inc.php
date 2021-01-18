@@ -31,8 +31,8 @@ function seConnecter($email) {
     return $lEtablissement;
 }
 
-// Fonction permettant la création d'un établissement
-function creerEtablissement($codeuai, $nom, $adresse, $cp, $ville, $tel, $email, $motpasse) {
+// Fonction permettant la création de l'établissement
+function creerLEtablissement($codeuai, $nom, $adresse, $cp, $ville, $tel, $email, $motpasse) {
     $cnx = gestionnaireDeConnexion();
     if ($cnx != NULL) {
         $req = "INSERT INTO etablissement (code_uai, nom, adresse, codepostal, ville, telephone, email, motpasse) 
@@ -44,8 +44,8 @@ function creerEtablissement($codeuai, $nom, $adresse, $cp, $ville, $tel, $email,
     return $creer_etablissement;
 }
 
-// Fonction permettant de lire un établissement grâce à son email
-function lireUnEtablissement($email) {
+// Fonction permettant de consulter un établissement grâce à son email
+function consulterLEtablissement($email) {
     $cnx = gestionnaireDeConnexion();
     if ($cnx != NULL) {
         $req = "SELECT * FROM etablissement WHERE email='$email'";
@@ -57,8 +57,8 @@ function lireUnEtablissement($email) {
     return $lEtablissement;
 }
 
-// Fonction permettant de lire tous les établissements répertoriés dans la base de données grâce à son code UAI
-function lireTouslesEtablissments($codeuai) {
+// Fonction permettant de consulter tout les établissements répertoriés dans la base de données grâce à son code UAI
+function consulterToutLesEtablissements($codeuai) {
     $cnx = gestionnaireDeConnexion();
     if ($cnx != NULL) {
         $req = "SELECT * FROM etablissement ORDER BY code_uai='$codeuai'";
@@ -70,7 +70,7 @@ function lireTouslesEtablissments($codeuai) {
 }
 
 // Fonction qui permet de supprimer l'établissement
-function supprimerUnEtablissment($codeuai) {
+function supprimerLEtablissment($codeuai) {
     $cnx = gestionnaireDeConnexion();
     if ($cnx != NULL) {
         $req = "DELETE FROM etablissement WHERE code_uai='$codeuai'";
@@ -82,7 +82,7 @@ function supprimerUnEtablissment($codeuai) {
 }
 
 // Fonction permettant de modifier les informations d'un établissment
-function modifierUnEtablissement($codeuai, $nom, $adresse, $cp, $ville, $tel, $email, $motpasse) {
+function modifierLEtablissement($codeuai, $nom, $adresse, $cp, $ville, $tel, $email, $motpasse) {
     $cnx = gestionnaireDeConnexion();
     if ($cnx != NULL) {
         $req = "UPDATE etablissement SET nom='$nom', adresse='$adresse', codepostal='$cp', ville='$ville', telephone='$tel', email='$email', motpasse='$motpasse'

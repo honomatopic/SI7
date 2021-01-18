@@ -2,7 +2,7 @@
 
 // Algorithme permettant la connexion de l'établissement
 if (isset($_POST["envoyer"], $_POST["email"], $_POST["motpasse"])) {
-    $lEtablissement = lireUnEtablissement($_POST["email"]);
+    $lEtablissement = consulterLEtablissement($_POST["email"]);
     if (isset($lEtablissement)) {
         if (filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
             $_SESSION["codeuai"] = $lEtablissement["code_uai"];
