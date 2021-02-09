@@ -17,7 +17,7 @@ require_once ("_entete.inc.php");
             <br>
             <input type="text" class="form-control" name="ville" id="ville" placeholder="Entrez la ville de l'établissement">
             <br>
-            <input type="text" pattern="((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$" class="form-control" name="tel" placeholder="Entrez le téléphone de l'établissement">
+            <input type="text" class="form-control" name="tel" placeholder="Entrez le téléphone de l'établissement">
             <br>
             <input type="email" class="form-control" name="email" placeholder="Entrez votre email">
             <br>
