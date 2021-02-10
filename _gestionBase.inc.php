@@ -62,8 +62,7 @@ function consulterToutLesEtablissements($codeuai) {
     $cnx = gestionnaireDeConnexion();
     if ($cnx != NULL) {
         $req = "SELECT * FROM etablissement ORDER BY code_uai='$codeuai'";
-        $requete_exec = mysqli_query($cnx, $req);
-        $touslesEtablissements = mysqli_fetch_all($requete_exec);
+        $touslesEtablissements = mysqli_query($cnx, $req);
     } else {
         echo "Une erreur est survenue";
     }
