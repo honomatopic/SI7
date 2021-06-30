@@ -8,7 +8,7 @@ function gestionnaireDeConnexion() {
     $bdd_utilisateur = "root";
     $bdd_motpasse = "root";
     $bdd_nom = "calcul";
-    $bdd_options = "--client_encoding==UTF8";
+    $bdd_options = "--client_encoding=UTF8";
     $cnx = pg_connect("host=$bdd_hote dbname=$bdd_nom user=$bdd_utilisateur password=$bdd_motpasse options=$bdd_options")
             or die("Pas de connexion à la base de données");
     /*if (pg_result_error($cnx)) {
