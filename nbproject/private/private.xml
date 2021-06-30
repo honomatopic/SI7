@@ -4,6 +4,12 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/var/www/html/SI7/index.php</file>
+            <file>file:/var/www/html/SI7/_entete.inc.php</file>
+            <file>file:/var/www/html/SI7/_gestionBase.inc.php</file>
+            <file>file:/var/www/html/SI7/calcul.sql</file>
+            <file>file:/var/www/html/SI7/connexion.traitement.php</file>
+            <file>file:/var/www/html/SI7/bienvenue.php</file>
+            <file>file:/var/www/html/SI7/inscriptionEtablissement.php</file>
         </group>
     </open-files>
 </project-private>

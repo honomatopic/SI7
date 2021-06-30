@@ -16,12 +16,12 @@ require_once ("_entete.inc.php");
             <button type="submit" class="btn btn-primary" name="envoyer">Envoyer</button>
             <br>
             <br>
-             <a href="inscriptionEtablissement.php"><button type="submit" name="envoyer" class="btn btn-info btn-lg">S'inscrire</button></a>
+            
         </form>
 
        
     </div> <!-- /container -->
-
+ <a href="inscriptionEtablissement.php"><button type="submit" name="envoyer" class="btn btn-info btn-lg">S'inscrire</button></a>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 </body>

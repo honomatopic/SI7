@@ -8,13 +8,14 @@ function gestionnaireDeConnexion() {
     $bdd_utilisateur = "root";
     $bdd_motpasse = "root";
     $bdd_nom = "calcul";
-    $cnx = mysqli_connect($bdd_hote, $bdd_utilisateur, $bdd_motpasse, $bdd_nom)
+    $bdd_options = "--client_encoding==UTF8";
+    $cnx = pg_connect("host=$bdd_hote dbname=$bdd_nom user=$bdd_utilisateur password=$bdd_motpasse options=$bdd_options")
             or die("Pas de connexion à la base de données");
-    if (mysqli_connect_errno()) {
-        echo "Echec de la connexion : " . mysqli_connect_error();
+    /*if (pg_result_error($cnx)) {
+        echo "Echec de la connexion : " . pg_last_error();
         exit();
-    }
-    mysqli_set_charset($cnx, 'utf8');
+    }*/
+    
     return $cnx;
 }
 
@@ -23,8 +24,8 @@ function seConnecter($email) {
     $cnx = gestionnaireDeConnexion();
     if ($cnx != NULL) {
         $req = "SELECT * FROM etablissement WHERE email='$email'";
-        $requete_exec = mysqli_query($cnx, $req);
-        $lEtablissement = mysqli_fetch_assoc($requete_exec);
+        $requete_exec = pg_query($cnx, $req);
+        $lEtablissement = pg_fetch_assoc($requete_exec);
     } else {
         echo "Une erreur est survenue";
     }
@@ -37,7 +38,7 @@ function creerLEtablissement($codeuai, $nom, $adresse, $cp, $ville, $tel, $email
     if ($cnx != NULL) {
         $req = "INSERT INTO etablissement (code_uai, nom, adresse, codepostal, ville, telephone, email, motpasse) 
     VALUES ('$codeuai', '$nom', '$adresse', '$cp', '$ville', '$tel', '$email', '$motpasse')";
-        $creer_etablissement = mysqli_query($cnx, $req);
+        $creer_etablissement = pg_query($cnx, $req);
     } else {
         echo "Une erreur est survenue";
     }
@@ -49,8 +50,8 @@ function consulterLEtablissement($email) {
     $cnx = gestionnaireDeConnexion();
     if ($cnx != NULL) {
         $req = "SELECT * FROM etablissement WHERE email='$email'";
-        $requete_exec = mysqli_query($cnx, $req);
-        $lEtablissement = mysqli_fetch_assoc($requete_exec);
+        $requete_exec = pg_query($cnx, $req);
+        $lEtablissement = pg_fetch_assoc($requete_exec);
     } else {
         echo "Une erreur est survenue";
     }
@@ -62,7 +63,7 @@ function consulterToutLesEtablissements($codeuai) {
     $cnx = gestionnaireDeConnexion();
     if ($cnx != NULL) {
         $req = "SELECT * FROM etablissement ORDER BY code_uai='$codeuai'";
-        $touslesEtablissements = mysqli_query($cnx, $req);
+        $touslesEtablissements = pg_query($cnx, $req);
     } else {
         echo "Une erreur est survenue";
     }
@@ -74,7 +75,7 @@ function supprimerLEtablissment($codeuai) {
     $cnx = gestionnaireDeConnexion();
     if ($cnx != NULL) {
         $req = "DELETE FROM etablissement WHERE code_uai='$codeuai'";
-        $supprimer_etablissement = mysqli_query($cnx, $req);
+        $supprimer_etablissement = pg_query($cnx, $req);
     } else {
         echo "Une erreur est survenue";
     }
@@ -87,7 +88,7 @@ function modifierLEtablissement($codeuai, $nom, $adresse, $cp, $ville, $tel, $em
     if ($cnx != NULL) {
         $req = "UPDATE etablissement SET nom='$nom', adresse='$adresse', codepostal='$cp', ville='$ville', telephone='$tel', email='$email', motpasse='$motpasse'
      WHERE code_uai='$codeuai'";
-        $modifier_etablissement = mysqli_query($cnx, $req);
+        $modifier_etablissement = pg_query($cnx, $req);
     } else {
         echo "Une erreur est survenue";
     }
