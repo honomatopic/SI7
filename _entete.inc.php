@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+$cnx = pg_connect("host=localhost dbname=calcul user=root password=root options=--client_encoding=UTF8") or die("Pas de connexion à la base de données");
 require_once ('connexion.traitement.php');
 require_once ('calcul.traitement.php');
 require_once ('inscriptionEtablissement.traitement.php');

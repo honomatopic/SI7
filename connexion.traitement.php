@@ -2,7 +2,6 @@
 
 // Algorithme permettant la connexion de l'établissement
 if (isset($_POST["envoyer"], $_POST["email"], $_POST["motpasse"])) {
-    $cnx = pg_connect("host=localhost dbname=calcul user=root password=root options=--client_encoding=UTF8") or die("Pas de connexion à la base de données");
     $req = "SELECT * FROM etablissement WHERE email='" . $_POST["email"] . "'";
     $requete_exec = pg_query($cnx, $req);
     while ($lEtablissement = pg_fetch_assoc($requete_exec)) {

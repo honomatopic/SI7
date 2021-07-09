@@ -3,7 +3,6 @@
 // Algorithme qui inaugure un nouvel établissment dans la base de données calcul
 if (isset($_POST["valider"])) {
     if (isset($_POST["codeuai"], $_POST["nom"], $_POST["adresse"], $_POST["cp"], $_POST["ville"], $_POST["tel"], $_POST["email"], $_POST["motpasse"])) {
-        $cnx = pg_connect("host=localhost dbname=calcul user=root password=root options=--client_encoding=UTF8") or die("Pas de connexion à la base de données");
         $req = "INSERT INTO etablissement (code_uai, nom, adresse, codepostal, ville, telephone, email, motpasse)
     VALUES ('" . $_POST["codeuai"] . "', '." . $_POST["nom"] . "', '" . $_POST["adresse"] . "', '" . $_POST["cp"] . "', '" . $_POST["ville"] . "', '" . $_POST["tel"] . "', '" . $_POST["email"] . "', '" . $_POST["motpasse"] . "')";
         $creer_etablissement = pg_query($cnx, $req);
