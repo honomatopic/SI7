@@ -1,7 +1,6 @@
 <?php
 session_start();
-require_once ('parametresbdd.inc.php');
-require_once ('_gestionBase.inc.php');
+
 require_once ('connexion.traitement.php');
 require_once ('calcul.traitement.php');
 require_once ('inscriptionEtablissement.traitement.php');
