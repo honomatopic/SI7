@@ -1,14 +1,14 @@
 <?php
 
-// affichage des erreurs php
-// error_reporting(E_ALL);
-//Fonction qui additionne
-function addition($premierchiffre, $deuxiemechiffre) {
+// Fonction qui additionne
+function addition($premierchiffre, $deuxiemechiffre)
+{
     return $resultatCalcul = $premierchiffre + $deuxiemechiffre;
 }
 
-//Fonction qui soustrait
-function soustraction($premierchiffre, $deuxiemechiffre) {
+// Fonction qui soustrait
+function soustraction($premierchiffre, $deuxiemechiffre)
+{
     return $resultatCalcul = $premierchiffre - $deuxiemechiffre;
 }
 
